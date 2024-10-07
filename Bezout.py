@@ -29,12 +29,17 @@ def Bezout(a, b):
         matriz1 = numpy.dot(matriz3, matriz1)
     
     x, y = matriz2[0, 0], matriz2[1, 0]
-    return matriz1[0], x, y
+    return x, y
 
+def mcd_euclidiano(a, b):
+    while b != 0:
+        a, b = b, a % b
+    return a
 
 a = int(input("Ingrese el valor de a: "))
 b = int(input("Ingrese el valor de b: "))
+c = mcd_euclidiano(a,b)
 
-gcd, x, y = Bezout(a, b)
+x, y = Bezout(a, b)
 print(f"Los coeficientes de Bézout para {a} y {b} son: x = {x}, y = {y}")
-print(f"Verificación: {a}*{x} + {b}*{y} = {gcd}")
+print(f"Verificación: {a}*{x} + {b}*{y} = {c}")
