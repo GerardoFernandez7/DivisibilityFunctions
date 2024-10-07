@@ -5,6 +5,7 @@
 # Descripción: Función Bezout, algoritmo matricial para encontrar los coeficientes
 #              de Bézout de dos números enteros a y b. 
 # Referencias: Python: Operadores aritméticos - R que R. (n.d.). https://rquer.netlify.app/python_basic/python_operations/ 
+# Agustín Valverde Ramos. (2021, October 2). Identidad de Bézout. Forma matricial [Video]. YouTube. https://www.youtube.com/watch?v=yCmNAs2adkw
 
 import numpy 
 
@@ -29,6 +30,7 @@ def Bezout(a, b):
         matriz1 = numpy.dot(matriz3, matriz1)
     
     x, y = matriz2[0, 0], matriz2[1, 0]
+
     return x, y
 
 def mcd_euclidiano(a, b):
