@@ -12,7 +12,7 @@ def Bezout(a, b):
     # Ingresar los valores de a y b
     
     matriz1 = numpy.array([a,b])
-    matriz2 = numpy.array([[0,1], [1,0]])
+    matriz2 = numpy.array([[1,0], [0,1]])
     
 
     #   1, 0, [a]
@@ -28,7 +28,7 @@ def Bezout(a, b):
         
         matriz1 = numpy.dot(matriz3, matriz1)
     
-    x, y = matriz2[0, 0], matriz2[0, 1]
+    x, y = matriz2[0, 0], matriz2[1, 0]
     return matriz1[0], x, y
 
 
