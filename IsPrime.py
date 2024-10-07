@@ -1,3 +1,10 @@
+# Autores: Gerardo André Fernández Cruz, Leonardo Dufrey Mejía Mejía, Abby Sofia Donis Agreda
+# Fecha de creación: 2024-10-06
+# Fecha de actualización: 2024-10-06
+# Versión: 1.1
+# Descripción: Función isPrime, test de primalidad utilizando la criba de Eratóstenes, 
+#              determinando si un entero positivo n es primo o no. 
+
 def criba(n):
     not_prime = set()
     primes = []
