@@ -24,7 +24,16 @@ def is_prime(n):
             return False, i
     return True, None
 
-n = int(input("Ingrese un entero positivo n: "))
+#Validación input
+def input_u(mensaje):
+    while True:
+        valor_input = input(mensaje)
+        try:
+            return int(valor_input)
+        except ValueError:
+            print("Ingrese solamente numeros, intente de nuevo")
+
+n = input_u("Ingrese un entero positivo n: ")
 
 es_primo, divisor = is_prime(n)
 

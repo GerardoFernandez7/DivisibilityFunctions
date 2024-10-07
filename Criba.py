@@ -15,8 +15,17 @@ def criba(n):
                 not_prime.add(j)
     return primes
 
+#Validación input
+def input_u(mensaje):
+    while True:
+        valor_input = input(mensaje)
+        try:
+            return int(valor_input)
+        except ValueError:
+            print("Ingrese solamente numeros, intente de nuevo")
+
 # Solicitar entrada al usuario
-a = int(input("Ingrese un numero: "))
+a = input_u("Ingrese un numero: ")
 
 # Mostrar el resultado
 print(criba(a))

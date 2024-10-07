@@ -37,9 +37,17 @@ def mcd_euclidiano(a, b):
     while b != 0:
         a, b = b, a % b
     return a
+#Validación input
+def input_u(mensaje):
+    while True:
+        valor_input = input(mensaje)
+        try:
+            return int(valor_input)
+        except ValueError:
+            print("Ingrese solamente numeros, intente de nuevo")
 
-a = int(input("Ingrese el valor de a: "))
-b = int(input("Ingrese el valor de b: "))
+a = input_u("Ingrese el valor de a: ")
+b = input_u("Ingrese el valor de b: ")
 c = mcd_euclidiano(a,b)
 
 x, y = Bezout(a, b)

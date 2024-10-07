@@ -9,9 +9,18 @@ def mcd_euclidiano(a, b):
         a, b = b, a % b
     return a
 
+#Validación input
+def input_u(mensaje):
+    while True:
+        valor_input = input(mensaje)
+        try:
+            return int(valor_input)
+        except ValueError:
+            print("Ingrese solamente numeros, intente de nuevo")
+
 # Solicitar entrada al usuario
-a = int(input("Ingrese un entero positivo a: "))
-b = int(input("Ingrese un entero positivo b: "))
+a = input_u("Ingrese un entero positivo a: ")
+b = input_u("Ingrese un entero positivo b: ")
 
 # Calcular el MCD
 resultado = mcd_euclidiano(a, b)
